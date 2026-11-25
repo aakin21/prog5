@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+dist/
+
+# SQLite files of the services
+data/
