@@ -1,0 +1,16 @@
+{
+  "name": "match-ticket-booking",
+  "private": true,
+  "type": "module",
+  "workspaces": ["services/*", "client"],
+  "scripts": {
+    "services": "concurrently -n catalog,reservation,payment,live -c blue,green,yellow,magenta \"npm start -w catalog\" \"npm start -w reservation\" \"npm start -w payment\" \"npm start -w live\"",
+    "client": "npm run dev -w client",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "concurrently": "^9.0.0",
+    "typescript": "^5.6.0"
+  }
+}
